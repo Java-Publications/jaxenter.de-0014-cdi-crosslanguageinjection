@@ -16,5 +16,4 @@ public class DemoLogicKotlinWrapper implements DemoLogic {
     public String workOnString() {
         return kotlin.workOnString();
     }
-
 }

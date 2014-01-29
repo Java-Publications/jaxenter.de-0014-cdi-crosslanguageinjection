@@ -18,5 +18,4 @@ public class DemoLogicDefaultProducer {
         final DemoLogic logic = new DemoLogic(){};
         return creator.activateCDI(logic);
     }
-
 }
