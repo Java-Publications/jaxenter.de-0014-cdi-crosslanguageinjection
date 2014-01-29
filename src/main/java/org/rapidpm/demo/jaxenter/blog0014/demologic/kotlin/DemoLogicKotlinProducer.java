@@ -19,6 +19,4 @@ public class DemoLogicKotlinProducer {
         final DemoLogic logic = new DemoLogicKotlinWrapper();
         return creator.activateCDI(logic);
     }
-
-
 }

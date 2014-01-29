@@ -11,5 +11,4 @@ public interface DemoLogic {
     public default String workOnString() {
         return "DemoLogicDefault";
     }
-
 }

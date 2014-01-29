@@ -1,6 +1,5 @@
 package org.rapidpm.demo.jaxenter.blog0014.demologic;
 
-import org.rapidpm.demo.jaxenter.blog0014.Blog0014;
 import org.rapidpm.demo.jaxenter.blog0014.ContextResolver;
 import org.rapidpm.demo.jaxenter.blog0014.ManagedInstanceCreator;
 

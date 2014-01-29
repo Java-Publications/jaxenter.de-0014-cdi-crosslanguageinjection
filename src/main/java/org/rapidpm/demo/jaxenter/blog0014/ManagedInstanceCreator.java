@@ -32,7 +32,6 @@ import java.util.Set;
  */
 public class ManagedInstanceCreator {
 
-
     @Inject BeanManager beanManager;
 
     public <T> T getManagedInstance(final Class<T> beanType, final AnnotationLiteral annotationLiteral ){
@@ -47,7 +46,9 @@ public class ManagedInstanceCreator {
                                 .findFirst()
                                 .map((bean) -> {
                                     final Bean<T> beanTyped = (Bean<T>) b;
-                                    return beanTyped.create(beanManager.createCreationalContext(beanTyped));
+                                    final CreationalContext<T> context
+                                            = beanManager.createCreationalContext(beanTyped);
+                                    return beanTyped.create(context);
                                 })
                                 .get())
                 .findFirst()
@@ -64,5 +65,4 @@ public class ManagedInstanceCreator {
         injectionTarget.postConstruct(t);
         return t;
     }
-
 }
